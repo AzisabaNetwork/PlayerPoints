@@ -119,7 +119,7 @@ public class PlayerPointsAPI {
      * @param amount The amount of points to take/give
      * @return true if the transaction was successful, false otherwise
      */
-    public boolean pay(@NotNull UUID source, @NotNull UUID target, int amount) {
+    public synchronized boolean pay(@NotNull UUID source, @NotNull UUID target, int amount) {
         Objects.requireNonNull(source);
         Objects.requireNonNull(target);
 
